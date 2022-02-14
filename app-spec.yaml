@@ -1,0 +1,14 @@
+alerts:
+- rule: DEPLOYMENT_FAILED
+- rule: DOMAIN_FAILED
+functions:
+- github:
+    branch: master
+    deploy_on_push: true
+    repo: digitalocean/sample-functions-typescript-helloworld
+  name: ts-api
+  routes:
+  - path: /
+  source_dir: /
+name: typescript-helloworld
+region: blr
