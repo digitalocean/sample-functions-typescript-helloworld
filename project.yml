@@ -2,4 +2,4 @@ packages:
   - name: sample
     actions:
       - name: hello
-        runtime: 'typescript:default'
+        runtime: 'nodejs:default'

@@ -1,0 +1,9 @@
+{
+  "main": "hello.js",
+	"devDependencies": {
+    "typescript": "^4.8.2"
+	},
+  "scripts": {
+		"build": "tsc hello.ts"
+  }
+}
