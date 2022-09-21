@@ -1,5 +1,17 @@
+environment: {}
+parameters: {}
 packages:
   - name: sample
-    actions:
+    environment: {}
+    parameters: {}
+    annotations: {}
+    functions:
       - name: hello
-        runtime: 'typescript:default'
+        binary: false
+        main: ''
+        runtime: 'nodejs:default'
+        web: true
+        parameters: {}
+        environment: {}
+        annotations: {}
+        limits: {}
