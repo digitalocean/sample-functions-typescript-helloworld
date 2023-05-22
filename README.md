@@ -52,12 +52,7 @@ doctl serverless functions invoke sample/hello -p name:Sammy
 
 ### `curl`
 ```bash
-package_name="sample" # replace this with your package name (optional if not using packages)
-func_name="hello" # replace this with your function name
-func_namespace=$(doctl serverless fn get $package_name/$func_name -o json | grep -oP '(?<="namespace": ")[^"]*' | cut -d'/' -f1)
-api_host=$(doctl serverless namespaces list -o json | grep -A2 "\"namespace\": \"$namespace\"" | grep -oP '(?<="api_host": ")[^"]*')
-curl -X GET "${api_host}/api/v1/web/${func_namespace}/${package_name}/${func_name}" -H "Content-Type: application/json"
-
+curl -X GET "$(doctl sls fn get sample/hello --url)"
 ```
 ```
 Hello stranger!
