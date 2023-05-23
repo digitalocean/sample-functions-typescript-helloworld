@@ -52,7 +52,7 @@ doctl serverless functions invoke sample/hello -p name:Sammy
 
 ### `curl`
 ```bash
-curl -X GET "$(doctl sls fn get sample/hello --url)"
+curl $(doctl sls fn get sample/hello --url)
 ```
 ```
 Hello stranger!
